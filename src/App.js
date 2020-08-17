@@ -5,10 +5,10 @@ import {
   Redirect,
   Switch,
 } from "react-router-dom";
-import ''
 import Users from "./users/pages/Users";
 import NewPlace from "./places/pages/NewPlace";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
+import UserPlaces from "./places/pages/UserPlaces";
 
 function App() {
   return (
@@ -18,6 +18,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Users></Users>
+          </Route>
+          <Route path="/:userId/places" exact>
+            <UserPlaces></UserPlaces>
           </Route>
           <Route path="/places/new" exact>
             <NewPlace></NewPlace>
